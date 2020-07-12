@@ -14,16 +14,15 @@ div.heart{
     animation: pulse 1s ease infinite;
     background-color: red;
     display: inline-block;
-    height: 400px;
-    transform: rotate(-45deg);
+    height: 300px;
     position: relative;
-    width: 400px;
+    width: 300px;
 }
 
 @keyframes pulse{
-    0% {transform: scale(1);}
-    50% {transform: scale(1.2);}
-    100% {transform: scale(1);}
+    0% {transform: rotate(-45deg) scale(1);}
+    50% {transform: rotate(-45deg) scale(1.2);}
+    100% {transform: rotate(-45deg) scale(1);}
 }
 
 div.heart:after,
@@ -31,17 +30,17 @@ div.heart:before{
     background-color: red;
     border-radius: 50%;
     content: ''; /*Vai fazer meu quadrado aparecer*/
-    height: 400px;
+    height: 300px;
     position: absolute;
-    width: 400px;
+    width: 300px;
 }
 
 div.heart::after{
     left:0;
-    top: -200px;
+    top: -150px;
 }
 
 div.heart::before{
-    left: 200px;
+    left: 150px;
     top: 0;
 }

@@ -1,0 +1,38 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    align-items: center;
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+}
+
+div.heart{
+    animation: pulse 1s ease infinite;
+    background-color: red;
+    height: 400px;
+    transform: rotate(-45deg);
+    position: relative;
+    width: 400px;
+}
+
+div.heart:after,
+div.heart:before{
+    background-color: red;
+    border-radius: 50%;
+    content: ''; /*Vai fazer meu quadrado aparecer*/
+    height: 400px;
+    position: absolute;
+    width: 400px;
+}
+
+div.heart::after{
+    top: -200px;
+}
+
+div.heart::before{
+    left: 200px;
+}

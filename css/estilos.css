@@ -13,10 +13,17 @@ body{
 div.heart{
     animation: pulse 1s ease infinite;
     background-color: red;
+    display: inline-block;
     height: 400px;
     transform: rotate(-45deg);
     position: relative;
     width: 400px;
+}
+
+@keyframes pulse{
+    0% {transform: scale(1);}
+    50% {transform: scale(1.2);}
+    100% {transform: scale(1);}
 }
 
 div.heart:after,
@@ -30,9 +37,11 @@ div.heart:before{
 }
 
 div.heart::after{
+    left:0;
     top: -200px;
 }
 
 div.heart::before{
     left: 200px;
+    top: 0;
 }
